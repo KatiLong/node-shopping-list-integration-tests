@@ -14,35 +14,18 @@ const expect = chai.expect;
 chai.use(chaiHttp);
 
 
-describe('Shopping List', function() {
+describe('Recipes', function() {
 
-  // Before our tests run, we activate the server. Our `runServer`
-  // function returns a promise, and we return the that promise by
-  // doing `return runServer`. If we didn't return a promise here,
-  // there's a possibility of a race condition where our tests start
-  // running before our server has started.
   before(function() {
     return runServer();
   });
 
-  // although we only have one test module at the moment, we'll
-  // close our server at the end of these tests. Otherwise,
-  // if we add another test module that also has a `before` block
-  // that starts our server, it will cause an error because the
-  // server would still be running from the previous tests.
   after(function() {
     return closeServer();
   });
 
-  // test strategy:
-  //   1. make request to `/shopping-list`
-  //   2. inspect response object and prove has right code and have
-  //   right keys in response object.
-  it('should list items on GET', function() {
-    // for Mocha tests, when we're dealing with asynchronous operations,
-    // we must either return a Promise object or else call a `done` callback
-    // at the end of the test. The `chai.request(server).get...` call is asynchronous
-    // and returns a Promise, so we just return it.
+
+  it('should list recipes on GET', function() {
     return chai.request(app)
       .get('/shopping-list')
       .then(function(res) {
