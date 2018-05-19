@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: VfcfbOuY1XaP6Tsv0B0OOcMl+ATnf0Uh+KQN2Dttiq9gZaLP4ezPWRn3Y1kQo4WuFUg0i7ClkiJZDlEzlaqPa2sBkrrbyHzJZ89mR0et8x9oFVJuJ46AJRUiXJAIz3qxIEe3kO7BXjGzOP8y5aC9DqZVJMgKI3ERCthHvYVYwO7c5v5szzeuJL2pqoK0IQnC7mn54Y8Hk3jTSvg5Y95Ol/DusxO1LBraQqLA0QU4ptch/yjpHwiVyMdsMZR10PqtSFIp2Q1xYJ0qNUsD91wtz8v30mJgjjGRTx7hxkuoq99wGt/CnV8sJCb2jD6lUM6H8xfYal/MQHujsT7VjoQR1QTozdn0QSmOd0H+6jthYmLd1X6wQpzIw7bo6+D7gxjVSHCYUe0+rYukWCFvLYEYVvmzty/x6IP3K19eYf2kRm/42OWCXZb/eDgKkKQyliagDU4sf52UyekQHFmofzOHvgbDY7n2Eo4DHjeD9EwI8TSnxjwHkWc/fynoRaFtLeKDJjuGI0iE0IrBkwJYTOcPIq1T0XjnjTBKhT+VECB3ZQCVISkRZ/vl+w2VTtYlzdv4u5B15QpKRtXmzh0T1p3A6/lh2mGXJeOpEvHEUR0jTlSPZNmVOIy4IZBHIbeOZDY46cvV3AkGKjz9068k+PoZY1hIF0qoaT94C8+/5tW8sNM=
+    app: stormy-sea-61987
+  on:
+    repo: KatiLong/node-shopping-list-integration-tests
